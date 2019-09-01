@@ -7,6 +7,8 @@
             body {
                 background-color: #0093D1;
                 color: white;
+                margin-left: 10%;
+                margin-right: 10%;
             }
             h1 {
                 background-color: #004C70;
@@ -15,10 +17,6 @@
             }
             a {
                 color: #F2635F;
-            }
-            p {
-                margin-left: 10%;
-                margin-right: 10%;
             }
         </style>
     </head>
