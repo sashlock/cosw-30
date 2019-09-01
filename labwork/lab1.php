@@ -37,10 +37,10 @@
                     </ul>
                     This assignment was fairly challenging due to having working with the command line. Remembering the exact order of commands to update and push this assignment to GitHub so 
                     it would show up in Heroku was difficult at first. I think I have a a fairly good hang of it now.
-                    /* lab1.php
+                </p>";
+                 /* lab1.php
                     Scott Ashlock
                     09/01/19 */
-                </p>";
             ?>
     </body>
 </html>
