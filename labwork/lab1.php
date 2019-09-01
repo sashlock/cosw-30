@@ -16,6 +16,10 @@
             a {
                 color: #F2635F;
             }
+            p {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
         </style>
     </head>
     <body>
