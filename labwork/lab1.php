@@ -31,7 +31,7 @@
             dabbled in web design here and there since back when GeoCities was still a thing. 
             I think I made my first website in 1996 or so and edited the code using WebTV since 
             I did not have computer at the time. Beyond web development and programming I spend 
-            most of my time listening to podcasts or reading.</p>
+            most of my time listening to podcasts or reading. This is my <a href="https://github.com/sashlock" target="_blank">GitHub profile</a>.</p>
             
             
             
