@@ -29,18 +29,18 @@
             dabbled in web design here and there since back when GeoCities was still a thing. 
             I think I made my first website in 1996 or so and edited the code using WebTV since 
             I did not have computer at the time. Beyond web development and programming I spend 
-            most of my time listening to podcasts or reading. </p>
+            most of my time listening to podcasts or reading.</p>
             
             
             
             <?php
-            echo "<p>Here are a couple of the podcasts I enjoy:
+            echo "<p>Here are a couple of the podcasts I enjoy:</p>
                     <ul>
                         <li><a href='https://www.dharmapunxnyc.com/' target='_blank'>Dharma Punx NYC</a>: Dharma talks and mediations by secular and unaffiliated Buddhist teacher Josh Korda.</li>
                         <li><a href='http://thedollop.libsyn.com/' target='_blank'>The Dollop</a>: This is a podcast is hosted by two commedians, Dave Anthony and Gereth Reynolds. They discuss
                         a funny or odd story from American history.</li>
                     </ul>
-                    This assignment was fairly challenging due to having working with the command line. Remembering the exact order of commands to update and push this assignment to GitHub so 
+                    <p>This assignment was fairly challenging due to having working with the command line. Remembering the exact order of commands to update and push this assignment to GitHub so 
                     it would show up in Heroku was difficult at first. I think I have a a fairly good hang of it now.
                 </p>";
                  /* lab1.php
