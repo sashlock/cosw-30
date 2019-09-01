@@ -4,16 +4,20 @@
         <title>Labwork 1: Hello World</title>
         <meta charset="utf-8">
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Roboto&display=swap');
+            
             body {
                 background-color: #0093D1;
                 color: white;
                 margin-left: 10%;
                 margin-right: 10%;
+                font-family: 'Roboto', sans-serif;
             }
             h1 {
                 background-color: #004C70;
                 color: white;
                 padding: 1.5em;
+                font-family: 'Hepta Slab', serif;
             }
             a {
                 color: #F2635F;
