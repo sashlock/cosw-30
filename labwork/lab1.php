@@ -5,8 +5,15 @@
         <meta charset="utf-8">
         <style>
             body {
-                background-color: black;
+                background-color: #0093D1;
                 color: white;
+            }
+            h1 {
+                background-color: #004C70;
+                color: white;
+            }
+            a {
+                color: #F2635F;
             }
         </style>
     </head>
