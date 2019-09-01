@@ -11,6 +11,7 @@
             h1 {
                 background-color: #004C70;
                 color: white;
+                padding: 1.5em;
             }
             a {
                 color: #F2635F;
@@ -31,7 +32,7 @@
             <?php
             echo "<p>Here are a couple of the podcasts I enjoy:
                     <ul>
-                        <li><a href='https://www.dharmapunxnyc.com/' target='_blank'>Dharma Punx NYC</a>: Dharma talks and mediations by secular and unaffiliated Buddhist teacher Josh Korda</li>
+                        <li><a href='https://www.dharmapunxnyc.com/' target='_blank'>Dharma Punx NYC</a>: Dharma talks and mediations by secular and unaffiliated Buddhist teacher Josh Korda.</li>
                         <li><a href='http://thedollop.libsyn.com/' target='_blank'>The Dollop</a>: This is a podcast is hosted by two commedians, Dave Anthony and Gereth Reynolds. They discuss
                         a funny or odd story from American history.</li>
                     </ul>
