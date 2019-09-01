@@ -2,6 +2,13 @@
 <html>
     <head>
         <title>Labwork 1: Hello World</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+        </style>
     </head>
     <body>
         <h1>Scott Ashlock</h1>
