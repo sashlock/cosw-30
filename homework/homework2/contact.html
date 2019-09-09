@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Gojira 2020</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+            
+            label {
+                font-weight: bold;
+                display: block;
+                padding: .5em;
+                font-family: 'Oswald', sans-serif;
+            }
+            .checkbox {
+                font-weight: normal;
+                font-family: 'Roboto', sans-serif;
+            }
+            #header_blue {
+                background: #3C3B6E;
+                background-size: auto;
+                height: 200px;
+            }
+            #header_grad {
+                background-image: linear-gradient(#FFFFFF 10%, #B22234 10%, #B22234 20%, #FFFFFF 20%, #FFFFFF 30%, #B22234 30%, 
+                #B22234 40%, #FFFFFF 40%, #FFFFFF 50%, #B22234 50%, #B22234 60%, #FFFFFF 60%, #FFFFFF 70%, #B22234 70%, 
+                #B22234 80%, #FFFFFF 80%, #FFFFFF 90%, #B22234 90%, #B22234 100%, #FFFFFF 100%);
+                background-size: auto;
+                height: 200px;
+            }
+            body {
+                background-image: linear-gradient(to right, #3C3B6E, #FFFFFF, #B22234);
+            }
+            form {
+                background: #fff;
+            }
+            button {
+                background-color: #000; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+}
+            
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            
+            <div id="header_blue" class="col-sm-3 text-center align-middle"><img alt="Godzilla from the Hanna-Barbera Godzilla cartoon" height="200" class="text-center"
+            src="https://lh3.googleusercontent.com/FSrNSsAdt3bHL6UXPxmyzuTvgwqR-gnfKE5XbLUSIXX1Fw-WOdm_T-_5Q586n79sSRsyQ21D-QaYM-aLXbpeSad5Xae-CZWnt-R00QKAH2mo9qcicHEP3q8hsGlem8bfLpxUHO9N8LFk6NC69SefxEMatyHNDP8Ktks60Q6fgYE0zG11DNMU3xWqTZtDzmYjwsbDETTlw3ILnLaMWI6z3aRgHsKuHj3IBnAg6OvaRx1QveuDT9wENPGFnzjCL3oTuNPadoVBQIwc9ChBRE9xCPdVwaBby5Ytzaix8MddkpXkOxaEt5Dkob0E5LSXC9Yv4OxRoJp33h9zucZy3O51uEsSM304Qql-UEBYzXszZLAih4XmKriaU-DfRaXJ7qjOcVJAoIMpkheo4aT4lKowqt1BzgoHSJdd9eUw8etoesjAZ84-0bK5sYBVgwtX43ZD5Yy-LIakCtQF8iS9iBFyUnEWLKW_A7QBvn46pXcmVG8adKNXxx75Thql0-aCG7wDQZRCzGFr5EQloctOYuvbsGSX80_XxbGptx7kCg8lQAwUlWiAt6wGQ3tRStIHIHDT_IeamiixQrHewjmgKjwN_XXiMoUP8neu_01Ec38DUuNq0v093TFhhXA98a3Ry6fsTeuuYKMqfF48G6RJJiuQFxo5e9Dl3C8RxC1I0e1bynNyu2Sn=w777-h786-no">
+            </div>
+            <div id="header_grad" class="col-sm-9"></div>
+        </div>
+        
+        <div>
+            <h1 class="text-center">Gojira 2020</h1>
+            <h2 class="text-center">ゴジラ 2020年</h2>
+        </div>
+        
+        <div class="container">
+        <div class="row">
+        
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+        <form action="process_contact.php" method="post">
+            <fieldset>
+            
+            <label for="first_name">First Name:
+                <input type="text" name="first_name" size="20" maxlength="40" required/>
+            </label>
+            
+            <label for="last_name">Last Name:
+                <input type="text" name="last_name" size="20" maxlength="40" required/>
+            </label>
+            
+            <label for="email">Email:
+                <input type="email" name="email" size="40" maxlength="254" required/>
+            </label>
+            
+            <label for="gender">Gender
+            <select name="gender" required>
+		        <option value="female">Female</option>
+		        <option value="male">Male</option>
+		        <option value="non_binary">Non-Binary</option>
+		        <option value="not_say" selected>Prefer Not To Say</option>
+	        </select></label>
+	        
+            <label for="age" required>Age
+                <input type="radio" name="age" value="18-23"> 18-23
+                <input type="radio" name="age" value="24-29"> 24-29
+                <input type="radio" name="age" value="30-39"> 30-39
+                <input type="radio" name="age" value="40-49"> 40-49
+                <input type="radio" name="age" value="50-59"> 50-59
+                    <input type="radio" name="age" value="60+" checked> 60+
+            </label>
+            
+            <label for="interests">Interests
+            <div class="checkbox">
+                <input class="check" type="checkbox" name="interests[]" value="writing">Writing     
+                <input class="check" type="checkbox" name="interests[]" value="reading">Reading   
+                <input class="check" type="checkbox" name="interests[]" value="outdoors">Outdoors
+                <input class="check" type="checkbox" name="interests[]" value="cooking">Cooking
+                <input class="check" type="checkbox" name="interests[]" value="sports">Sports
+                </div>
+            <div class="checkbox">
+                <input class="check" type="checkbox" name="interests[]" value="computers">Computers/Tech
+                <input class="check" type="checkbox" name="interests[]" value="games">Games     
+                <input class="check" type="checkbox" name="interests[]" value="movies">Movies     
+                <input class="check" type="checkbox" name="interests[]" value="summoning">Summoning Great Old Ones
+            </label>
+            </div>
+            
+            <label for="contribution">Contribution Amount:
+                <input type="number"name="contribution" value="0">
+            </label>
+            
+            <label for="subscribe">Do You Want To Subscribe To Our Email List?
+                <input type="checkbox" name="subscribe" value="subscribe" checked> Yes
+            </label>
+            
+            <label for="comments">Comments</label>
+                <textarea name="comments" cols="40" rows="8" maxlength="500" placeholder="enter comments here (optional)"/></textarea>
+            
+            
+            <label for="submit">
+                <button>Submit</button>
+            </label>
+            
+            </fieldset>
+        </form>
+        <div class="col-sm-3"></div>
+        </div>
+        </div>
+        
+    </body>
+</html>
