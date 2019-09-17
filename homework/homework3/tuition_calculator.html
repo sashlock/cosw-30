@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tuition Calculator</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+        <style type="text/css">
+
+            
+            label {
+                display: block;
+                padding: .5em;
+            }
+            .checkbox {
+                font-weight: normal;
+            }
+            
+            form {
+                background: #fff;
+            }
+            button {
+                background-color: #000; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+             
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 text-center">
+                <img class="mx-auto d-block" src="http://studycalifornia.us/wp-content/uploads/lbcc1.png" alt="Long Beach City College Logo"> 
+       
+                <h3>Fill out to calculate the cost of tuition:</h3>
+                <form action="process_tuition.php" method="post">
+                    <label for="residency">Are you a resident of California:
+                    <select name="residency">
+                        <option value="46">Resident</option>
+                        <option value="265">Non-Resident</option>
+                    </select>
+                    </label>
+                    
+                    <label for="units">Number of Units you are taking?
+                    <select name="units">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                    </select>
+                    </label>
+                    
+                    <label name="health_fee">There is a <strong>mandatory Student Health Fee of $20</strong> for each student who enrolls in any classes
+                    </label>
+                    
+                    <label for="csc">Do you want a College Services Card?:
+                    <select name="csc">
+                        <option value="20" default>Yes ($20)</option>
+                        <option value="0">No</option>
+                    </select>
+                    </label>
+                    
+                    <label for="parking">Do you want a Parking Permit?:
+                    <select name="parking">
+                        <option value="30" default>Yes ($30)</option>
+                        <option value="0">No</option>
+                    </select>
+                    </label>
+                    
+                    
+                    <label name="submit">
+                    <input type="submit" value="Submit"/>
+                    </label>
+        
+                    <div class="col-sm-3"></div>
+            </div>
+            </div>
+        </form>
+    </body>
+    
+</html>
