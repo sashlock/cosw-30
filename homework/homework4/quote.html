@@ -4,25 +4,46 @@
         <meta charset="utf-8">
         <title>Favorite Quote</title>
         
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+                
         <style>
             input {
                 display: block;
             }
             
+            button {
+                margin: .5em;
+            }
             button:hover {
                 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
             }
         </style>
     </head>
     <body>
-        <form action="quote_process.php" method="POST">
-            <label for="">Please enter at least five words (could be a favorite quote) separated by a space.</label>
-            <input type="quote" id="quote" name="quote" required>
-            
-            <button>Submit!</button>
-            
-        </form>
-    <p>Click here to go to the <a href="population.php">Activity 2: Array Table Output</a>!.</p>   
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 text-center form-group">
+                    <form action="quote_process.php" method="POST">
+                        <label for="quote">Please enter at least five words (could be a favorite quote) separated by a space.</label>
+                        <input type="text" class="form-control" id="quote" name="quote" required>
+                        
+                        <button>Submit!</button>
+                    </form>
+        
+                <p>Click here to go to the <a href="population.php">Activity 2: Array Table Output</a>!.</p>
+                </div>
+            </div>
+        </div>
     </body>
     
 </html>
