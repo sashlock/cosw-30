@@ -11,7 +11,9 @@
  function quotient($a, $b) {
   return ($a/=$b);
  }
- 
+ function error() {
+  echo "You cannot divide by ZERO. Try again.";
+ }
  $value1 = $_POST['value1'];
  $value2 = $_POST['value2'];
  $operator = $_POST['value3'];
@@ -46,12 +48,12 @@
     
     <div>
      <label for="input1">Number no. 1</label>
-     <input type="number" name="value1" />
+     <input type="number" name="value1" required />
     </div>
    
     <div>
      <label for="input2">Number no. 2</label>
-     <input type="number" name="value2" />
+     <input type="number" name="value2" required />
     </div>
     
     <div>
