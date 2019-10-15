@@ -29,7 +29,7 @@
    <h1>The Most <del>Powerful</del> Basic Input/Output Machine Ever Created</h1>
   </div>
   <div>
-   <form action="function.php" method="post">
+   <form action="functions.php" method="post">
     
     <div>
      <label for="input1">Number no. 1</label>
@@ -61,7 +61,7 @@
   
 
 <?php
-/*
+
 if ($operator == "sum") {
         echo $value1 . " + " . $value2 . " = ";
         echo sum($value1 + $value2);
@@ -90,8 +90,8 @@ if ($operator == "sum") {
  function quotient($a, $b) {
   return ($a/=$b);
  }
-*/
 
+/*
 function calculate($value1, $value2) { 
      if ($operator == "sum") {
         echo $value1 . " + " . $value2 . " = ";
@@ -106,11 +106,11 @@ function calculate($value1, $value2) {
         echo $value1 . " / " . $value2 . " = ";
         return ($value1/$value2);
     } else {
-    echo "";
+    echo "please go back and select an operator";
     }}
 
-    calculate($value1, $value2);
-
+    calculate();
+*/
 
 ?>   
  </body>
