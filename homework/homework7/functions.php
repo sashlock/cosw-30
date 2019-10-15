@@ -5,6 +5,19 @@
  $value2 = $_POST['value2'];
  $operator = $_POST['value3'];
  
+  function sum($a, $b) {
+ return ($a + $b);
+ }
+ function difference($a, $b) {
+ return ($a - $b);
+ }
+ function product($a, $b) {
+  return ($a*$b);
+ }
+ function quotient($a, $b) {
+  return ($a/=$b);
+ }
+ 
 ?>
  
 
@@ -78,39 +91,6 @@ if ($operator == "sum") {
     echo "";
 }
 
- function sum($a, $b) {
- return ($a + $b);
- }
- function difference($a, $b) {
- return ($a - $b);
- }
- function product($a, $b) {
-  return ($a*$b);
- }
- function quotient($a, $b) {
-  return ($a/=$b);
- }
-
-/*
-function calculate($value1, $value2) { 
-     if ($operator == "sum") {
-        echo $value1 . " + " . $value2 . " = ";
-        return ($value1 + $value2);
-    } else if ($operator == "difference") {
-        echo $value1 . " - " . $value2 . " = ";
-        return ($value1 - $value2);
-    } else if ($operator == "product") {
-        echo $value1 . " x " . $value2 . " = ";
-        return ($value1*$value2);
-    } else if ($operator == "quotient") {
-        echo $value1 . " / " . $value2 . " = ";
-        return ($value1/$value2);
-    } else {
-    echo "please go back and select an operator";
-    }}
-
-    calculate();
-*/
 
 ?>   
  </body>
