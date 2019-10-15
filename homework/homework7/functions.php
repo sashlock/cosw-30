@@ -5,20 +5,6 @@
  $value2 = $_POST['value2'];
  $operator = $_POST['value3'];
  
- 
- function sum($a = 0, $b = 0) {
- return ($a + $b);
- }
- function difference($a = 0, $b = 0) {
- return ($a - $b);
- }
- function product($a = 0, $b = 0) {
-  return ($a * $b);
- }
- function quotient($a = 0, $b = 0) {
-  return ($a /= $b);
- }
- 
 ?>
  
 
@@ -40,10 +26,10 @@
  </head>
  <body>
   <div>
-   <h1>The Most Powerful Input/Output Machine Ever Created</h1>
+   <h1>The Most <del>Powerful</del> Basic Input/Output Machine Ever Created</h1>
   </div>
   <div>
-   <form action="functions.php" method="post">
+   <form action="function.php" method="post">
     
     <div>
      <label for="input1">Number no. 1</label>
@@ -75,7 +61,7 @@
   
 
 <?php
-
+/*
 if ($operator == "sum") {
         echo $value1 . " + " . $value2 . " = ";
         echo sum($value1 + $value2);
@@ -92,7 +78,20 @@ if ($operator == "sum") {
     echo "";
 }
 
-/*
+ function sum($a, $b) {
+ return ($a + $b);
+ }
+ function difference($a, $b) {
+ return ($a - $b);
+ }
+ function product($a, $b) {
+  return ($a*$b);
+ }
+ function quotient($a, $b) {
+  return ($a/=$b);
+ }
+*/
+
 function calculate($value1, $value2) { 
      if ($operator == "sum") {
         echo $value1 . " + " . $value2 . " = ";
@@ -107,11 +106,11 @@ function calculate($value1, $value2) {
         echo $value1 . " / " . $value2 . " = ";
         return ($value1/$value2);
     } else {
-    echo "please go back and select an operator";
+    echo "";
     }}
 
-    calculate();
-*/
+    calculate($value1, $value2);
+
 
 ?>   
  </body>
