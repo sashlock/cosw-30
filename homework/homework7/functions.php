@@ -1,27 +1,22 @@
 <?php
-     echo "<h2>Do you feel the raw power of this Input/Output machine?</h2>";
+
  
  $value1 = $_POST['value1'];
  $value2 = $_POST['value2'];
  $operator = $_POST['value3'];
-
  
  
- function sum($a, $b)
- {
+ function sum($a = 0, $b = 0) {
  return ($a + $b);
  }
- function difference($a, $b)
- {
+ function difference($a = 0, $b = 0) {
  return ($a - $b);
  }
- function product($a, $b)
- {
- return ($a *= $b);
+ function product($a = 0, $b = 0) {
+  return ($a * $b);
  }
- function quotient($a, $b)
- {
- return ($a /= $b);
+ function quotient($a = 0, $b = 0) {
+  return ($a /= $b);
  }
  
 ?>
@@ -30,7 +25,18 @@
 
 <html>
  <head>
- <title>COSW30 - Homework 7</title>
+  <title>COSW30 - Homework 7</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
  </head>
  <body>
   <div>
@@ -52,7 +58,6 @@
     <div>
      <label for="input3">Operator</label>
      <select name="value3" id="operator">
-      <option value="">--Please select and operation--</option>
       <option value="sum">Add (+)</option>
       <option value="difference">Subtract (-)</option>
       <option value="product">Multiply (*)</option>
@@ -79,12 +84,12 @@ if ($operator == "sum") {
         echo difference($value1 - $value2);
 } elseif ($operator == "product") {
         echo $value1 . " x " . $value2 . " = ";
-        echo product($value1 *= $value2);
+        echo product($value1 * $value2);
 } elseif ($operator == "quotient") {
         echo $value1 . " / " . $value2 . " = ";
         echo quotient($value1 /= $value2);
 } else {
-    echo "please go back and select an operator";
+    echo "";
 }
 
 /*
