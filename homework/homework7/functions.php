@@ -1,11 +1,5 @@
 <?php
-
- 
- $value1 = $_POST['value1'];
- $value2 = $_POST['value2'];
- $operator = $_POST['value3'];
- 
-  function sum($a, $b) {
+ function sum($a, $b) {
  return ($a + $b);
  }
  function difference($a, $b) {
@@ -17,6 +11,12 @@
  function quotient($a, $b) {
   return ($a/=$b);
  }
+ 
+ $value1 = $_POST['value1'];
+ $value2 = $_POST['value2'];
+ $operator = $_POST['value3'];
+ 
+
  
 ?>
  
@@ -77,16 +77,16 @@
 
 if ($operator == "sum") {
         echo $value1 . " + " . $value2 . " = ";
-        echo sum($value1 + $value2);
+        echo sum($value1, $value2);
 } elseif ($operator == "difference") {
         echo $value1 . " - " . $value2 . " = ";
-        echo difference($value1 - $value2);
+        echo difference($value1, $value2);
 } elseif ($operator == "product") {
         echo $value1 . " x " . $value2 . " = ";
-        echo product($value1 * $value2);
+        echo product($value1, $value2);
 } elseif ($operator == "quotient") {
         echo $value1 . " / " . $value2 . " = ";
-        echo quotient($value1 /= $value2);
+        echo quotient($value1, $value2);
 } else {
     echo "";
 }
