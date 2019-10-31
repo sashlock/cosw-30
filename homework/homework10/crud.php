@@ -6,6 +6,15 @@ include('database.php');
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $first_name = $POST['first_name'];
+    $last_name = $POST['last_name'];
+    $email = $POST['email'];
+    $password = $POST['password'];
+
+    $insert_query = 'INSERT INTO USER_ASHLOCK (first_name, last_name, email. password)
+        VALUES ($first_name, $last_name, $email, $password)';
+
+    $result = mysql_query($connection, $insert_query);
 }
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
@@ -18,11 +27,11 @@ $result = mysqli_query($connection, $query);
 if($result) {
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);{
         // Output the results
-        printf($rows);
+        echo ' New user added to the database.';
     }
 } else {
     // Output an error
-    echo 'y u no work?';
+    echo 'Error entering new user';
 }
 ?>
 
