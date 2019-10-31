@@ -16,9 +16,9 @@ $query = 'SELECT * FROM USER_ASHLOCK';
 $result = mysqli_query($connection, $query);
 // Check if the database returned anything
 if($result) {
-    while($row = mysqli_fetch_array($result)){
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);{
         // Output the results
-        printf($row);
+        printf($rows);
     }
 } else {
     // Output an error
@@ -62,12 +62,16 @@ if($result) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+        <?php
+        foreach ($rows as $row) {
+            echo'<tr>
+                <td>'.$row['first_name'].'</td>
+                <td>'.$row['last_name'].'</td>
+                <td>'.$row['email'].'</td>
+                <td>'.$row['password'].'</td>
+            </tr>';
+        }
+            ?>
         </tbody>
     </table>
 </body>
