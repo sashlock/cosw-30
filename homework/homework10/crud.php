@@ -18,6 +18,7 @@ $result = mysqli_query($connection, $query);
 if($result) {
     while($row = mysqli_fetch_array($result)){
         // Output the results
+        printf($row);
     }
 } else {
     // Output an error
