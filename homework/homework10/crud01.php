@@ -6,34 +6,37 @@ include('database.php');
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $first_name = $POST['first_name'];
-    $last_name = $POST['last_name'];
-    $email = $POST['email'];
-    $password = $POST['password'];
-
-    $insert_query = 'INSERT INTO USER_ASHLOCK (first_name, last_name, email, password)
-        VALUES ($first_name, $last_name, $email, $password)';
-
-    $result = mysql_query($connection, $insert_query);
+    $first_name = $_POST['first_name'];
+    $last_name  = $_POST['last_name'];
+    $email      = $_POST['email'];
+    $password   = $_POST['password'];
+    $insert_query = "INSERT INTO USER_CATTAN (first_name, last_name, email, password)
+                    VALUES ($first_name, $last_name, $email, $password)";
+    $result1 = mysqli_query($connection, $insert_query);
+    if($result1) {
+        echo 'New user added to the database';
+    } else {
+        echo 'Error entery';
+    }
 }
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
 // Create your query
-$query = 'SELECT * FROM USER_ASHLOCK';
+$query = 'SELECT * FROM USER_CATTAN';
 // Run your query
 $result = mysqli_query($connection, $query);
 // Check if the database returned anything
 if($result) {
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);{
-        // Output the results
-        echo ' New user added to the database.';
-    }
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    //print_r($rows);
+    // Output the results
 } else {
     // Output an error
-    echo 'Error entering new user';
+    echo 'this is not working';
 }
 ?>
+
 
 <!doctype html>
 <html>
@@ -71,16 +74,18 @@ if($result) {
             </tr>
         </thead>
         <tbody>
+
         <?php
-        foreach ($rows as $row) {
-            echo'<tr>
+        foreach($rows as $row) {
+        echo '<tr>
                 <td>'.$row['first_name'].'</td>
                 <td>'.$row['last_name'].'</td>
                 <td>'.$row['email'].'</td>
                 <td>'.$row['password'].'</td>
             </tr>';
-            }
-            ?>
+        }
+        ?>
+
         </tbody>
     </table>
 </body>
