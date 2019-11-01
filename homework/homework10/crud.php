@@ -25,12 +25,14 @@ $query = 'SELECT * FROM USER_ASHLOCK';
 $result = mysqli_query($connection, $query);
 // Check if the database returned anything
 if($result) {
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);{
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
         // Output the results
         echo ' New user added to the database.';
-    }
+        print_r($rows);
+
 } else {
     // Output an error
+
     echo 'Error entering new user';
 }
 ?>
