@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $result = mysql_query($connection, $insert_query);
 }
-print_r($result);
+print_r($rows);
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
