@@ -10,12 +10,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $last_name = $POST['last_name'];
     $email = $POST['email'];
     $password = $POST['password'];
-    $insert_query = "INSERT INTO USER_ASHLOCK ('first_name', 'last_name', 'email', 'password')
+    $insert_query = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password)
         VALUES ($first_name, $last_name, $email, $password)";
 
     $result = mysql_query($connection, $insert_query);
 }
-
+print_r($result);
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
