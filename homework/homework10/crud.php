@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $POST['email'];
     $password = $POST['password'];
     $insert_query = "INSERT INTO USER_ASHLOCK ('first_name', 'last_name', 'email', 'password')
-        VALUES ('$first_name', '$last_name', '$email', '$password')";
+        VALUES ($first_name, $last_name, $email, $password)";
 
     $result = mysql_query($connection, $insert_query);
 }
