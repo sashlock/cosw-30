@@ -27,7 +27,7 @@ $result = mysqli_query($connection, $query);
 if($result) {
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
         // Output the results
-        echo ' New user added to the database.';
+        echo 'New user added to the database.';
         print_r($rows);
 
 } else {
