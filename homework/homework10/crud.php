@@ -8,58 +8,56 @@ include('database.php');
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $first_name = $_POST['first_name'];
+    /*$first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $retypepassword = $_POST['retypePassword'];
+    $retypepassword = $_POST['retypePassword'];*/
     
-    $insert_query = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password) 
-    VALUES ('$first_name', '$last_name', '$email', '$password');";
+    /* $insert_query = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password) 
+    VALUES ('$first_name', '$last_name', '$email', '$password')"; */
     //$result = mysql_query($connection, $insert_query);
     
         // Validating inputs:
-        if (!empty($_REQUEST['first_name'])) {
-        $first_name = $_REQUEST['first_name'];
+        if (!empty($_POST['first_name'])) {
+        $first_name = $_POST['first_name'];
         } else {
         $first_name = NULL;
         echo '<p class="text-danger">You forgot to
          enter your first name!</p>';
         }
         
-        if (!empty($_REQUEST['last_name'])) {
-        $last_name = $_REQUEST['last_name'];
+        if (!empty($_POST['last_name'])) {
+        $last_name = $_POST['last_name'];
         } else {
         $last_name = NULL;
         echo '<p class="text-danger">You forgot to
          enter your last name!</p>';
         }
         
-        if (!empty($_REQUEST['email'])) {
-        $email = $_REQUEST['email'];
+        if (!empty($_POST['email'])) {
+        $email = $_POST['email'];
         } else {
         $email = NULL;
         echo '<p class="text-danger">You forgot to
          enter your email!</p>';
         }
         
-        if (!empty($_REQUEST['password'])) {
-        $password = $_REQUEST['password'];
+        if (!empty($_POST['password'])) {
+        $password = $_POST['password'];
         } else {
         $password = NULL;
         echo '<p class="text-danger">You forgot to
          enter a password!</p>';
         }
 
-        if (($_REQUEST['password']) != ($_REQUEST['retypePassword'])) {
+        if (($_POST['password']) != ($_POST['retypePassword'])) {
         echo '<p class="text-danger">Your passwords do not match!</p>';
         }
         
-        /*$first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $retypepassword = $_POST['retypePassword'];*/
+        $insert_query = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password) 
+        VALUES ('$first_name','$last_name','$email','$password')";
+        //$result = mysql_query($connection, $insert_query);
 
 
 }
