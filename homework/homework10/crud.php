@@ -3,72 +3,64 @@
 include('database.php');
 
 
-// Create your query
-$query = "SELECT * FROM USER_ASHLOCK";
-// Run your query
-$result = mysqli_query($connection, $query);
-// Check if the database returned anything
-if($result) {
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        // Output the results
-        //echo 'New user added to the database.';
-        //print_r($rows);
-} else {
-    // Output an text-danger
-
-    echo 'error entering new user';
-}
-
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $first_name = $POST['first_name'];
-    $last_name = $POST['last_name'];
-    $email = $POST['email'];
-    $password = $POST['password'];
-    $retypepassword = $POST['retypepassword'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $retypepassword = $_POST['retypePassword'];
+    
     $insert_query = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password) 
     VALUES ('$first_name', '$last_name', '$email', '$password');";
-    $result = mysql_query($connection, $insert_query);
+    //$result = mysql_query($connection, $insert_query);
     
-    // Validate the first_name:
-if (!empty($_REQUEST['first_name'])) {
-$first_name = $_REQUEST['first_name'];
-} else {
-$first_name = NULL;
-echo '<p class="text-danger">You forgot to
- enter your first name!</p>';
-}
+        // Validating inputs:
+        if (!empty($_REQUEST['first_name'])) {
+        $first_name = $_REQUEST['first_name'];
+        } else {
+        $first_name = NULL;
+        echo '<p class="text-danger">You forgot to
+         enter your first name!</p>';
+        }
+        
+        if (!empty($_REQUEST['last_name'])) {
+        $last_name = $_REQUEST['last_name'];
+        } else {
+        $last_name = NULL;
+        echo '<p class="text-danger">You forgot to
+         enter your last name!</p>';
+        }
+        
+        if (!empty($_REQUEST['email'])) {
+        $email = $_REQUEST['email'];
+        } else {
+        $email = NULL;
+        echo '<p class="text-danger">You forgot to
+         enter your email!</p>';
+        }
+        
+        if (!empty($_REQUEST['password'])) {
+        $password = $_REQUEST['password'];
+        } else {
+        $password = NULL;
+        echo '<p class="text-danger">You forgot to
+         enter a password!</p>';
+        }
 
-if (!empty($_REQUEST['last_name'])) {
-$last_name = $_REQUEST['last_name'];
-} else {
-$last_name = NULL;
-echo '<p class="text-danger">You forgot to
- enter your last name!</p>';
-}
+        if (($_REQUEST['password']) != ($_REQUEST['retypePassword'])) {
+        echo '<p class="text-danger">Your passwords do not match!</p>';
+        }
+        
+        /*$first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $retypepassword = $_POST['retypePassword'];*/
 
-if (!empty($_REQUEST['email'])) {
-$email = $_REQUEST['email'];
-} else {
-$email = NULL;
-echo '<p class="text-danger">You forgot to
- enter your email!</p>';
-}
-
-if (!empty($_REQUEST['password'])) {
-$password = $_REQUEST['password'];
-} else {
-$password = NULL;
-echo '<p class="text-danger">You forgot to
- enter a password!</p>';
-}
-
-if (($_REQUEST['password']) != ($_REQUEST['retypepassword'])) {
-echo '<p class="text-danger">Your passwords do not match!</p>';
-}
 
 }
 
@@ -110,7 +102,7 @@ echo '<p class="text-danger">Your passwords do not match!</p>';
         <input type="password" id="password" name="password"><br>
         
         <label for="retypepassword">Re-type Password</label>
-        <input type="password" id="retypepassword" name="retypepassword"><br>
+        <input type="password" id="retypepassword" name="retypePassword"><br>
 
         <!--Add a second password input so the user has to retype their password -->
 
@@ -119,6 +111,26 @@ echo '<p class="text-danger">Your passwords do not match!</p>';
     </div>
     <div class="text-center">
     <h2>Output a List of Users</h2>
+<?php
+
+    // Create your query
+$query = "SELECT * FROM USER_ASHLOCK";
+// Run your query
+$result = mysqli_query($connection, $query);
+// Check if the database returned anything
+if($result) {
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        // Output the results
+        //echo 'New user added to the database.';
+        //print_r($rows);
+} else {
+    // Output an text-danger
+
+    echo 'error entering new user';
+}
+
+?>
+    
     <table class="table table-bordered">
         <thead>
             <tr>
