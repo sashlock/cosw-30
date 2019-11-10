@@ -27,25 +27,25 @@ if(isset($_GET['id'])) {
 // Verify the boxes aren't empty
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($_POST['first_name'])) {
-	$first_name = $_POST['first_name'];	
+	$first_name = mysqli_real_escape_string($connection,$_POST['first_name']);	
     } else {
         $first = "<p class='text-danger'>Please enter a first name.</p>";
     } 
     
     if (!empty($_POST['last_name'])) {
-	$last_name = $_POST['last_name'];	
+	$last_name = mysqli_real_escape_string($connection,$_POST['last_name']);	
     } else {
         $last = "<p class='text-danger'>Please enter a last name.</p>";
     }
     
     if (!empty($_POST['email']) && filter_var(($_POST['email']), FILTER_VALIDATE_EMAIL)) {
-	$email = $_POST['email'];	
+	$email = mysqli_real_escape_string($connection,$_POST['email']);	
     } else {
         $mail = "<p class='text-danger'>Please enter a valid email address.</p>";
     }
     
     if (!empty($_POST['password'])) {
-	$password = $_POST['password'];	
+	$password = mysqli_real_escape_string($connection,$_POST['password']);	
     } else {
         $pw = "<p class='text-danger'>Please enter a password.</p>";
     }
