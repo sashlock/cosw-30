@@ -16,8 +16,6 @@
     body {
         background-color: #fba90a;
         background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-family: 'Noto Sans', sans-serif;
     }
     h1,h2 {
@@ -28,14 +26,14 @@
         border: 5px solid #183BF0;
         border-radius: 5px;
         background-color: #F7EBD4;
-        padding: 1em;
-        margin: 1em;
+        padding: .5em;
+        margin: .25em;
     }
     
     .footer {
         position: fixed;
         left: 0;
-        bottom: -1em;
+        bottom: 0;
         width: 100%;
         background-color: #F7EBD4;
         color: #1430B8;
