@@ -80,9 +80,9 @@ if(isset($_GET['id'])) {
     }
     
     if (isset($_POST['del'])) {
-
 	mysqli_query($connection, "DELETE FROM USER_ASHLOCK WHERE user_id=$id");
-
+    } else {
+      $err = "<p class='text-danger'>There was an error deleting this user.</p>"; 
     }
 }
 
@@ -152,13 +152,14 @@ include('header.php');
         <br>
         <h2>Delete User</h2>
         <button name="del">Delete User</button><br>
-        <?php echo($failure) ?>
+        <?php echo($err) ?>
         
         
     </form>
     <br>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71CyXgbBUPL._SX466_.jpg" class="rounded img-fluid borders" alt="image of little dog in argyle sweater">
     </div>
     
 <?php
