@@ -26,6 +26,13 @@ if(isset($_GET['id'])) {
         
 // Verify the boxes aren't empty
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+    if (isset($_POST['del'])) {
+	mysqli_query($connection, "DELETE FROM USER_ASHLOCK WHERE user_id=$id");
+    } else {
+      $err = "<p class='text-danger'>There was an error deleting this user.</p>"; 
+    }
+    
     if (!empty($_POST['first_name'])) {
 	$first_name = mysqli_real_escape_string($connection,$_POST['first_name']);	
     } else {
@@ -79,11 +86,7 @@ if(isset($_GET['id'])) {
     $failure = "<p class='text-danger'>The update did not work.</p>";
     }
     
-    if (isset($_POST['del'])) {
-	mysqli_query($connection, "DELETE FROM USER_ASHLOCK WHERE user_id=$id");
-    } else {
-      $err = "<p class='text-danger'>There was an error deleting this user.</p>"; 
-    }
+    
 }
 
 /*

@@ -69,7 +69,7 @@ include('database.php');
     // If everything is validated, INSERT new user into database
     if ($first_name && $last_name && $email && $validatePassword) {
     $sql = "INSERT INTO USER_ASHLOCK (first_name, last_name, email, password) 
-    VALUES ('$first_name','$last_name','$email','$validatePasswordgit')";
+    VALUES ('$first_name','$last_name','$email','$validatePassword')";
     mysqli_query($connection, $sql);
     $create = "<p class='text-success'>New user created.</p>";
     } else {
