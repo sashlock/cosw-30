@@ -17,13 +17,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/labwork/lab11/login.php">Login</a>
-                </li>
-                <!-- Add logic to hide the Logout link if the user isn't logged in -->
-                <li class="nav-item">
+            <?php if(!isset($_SESSION['user_id'])) {
+                echo'<li class="nav-item active">
+                <a class="nav-link" href="/labwork/lab11/login.php">Login</a>
+                </li>';
+            } else {
+                // Add logic to hide the Logout link if the user isn't logged in
+                echo'<li class="nav-item">
                     <a class="nav-link" href="/labwork/lab11/logout.php">Logout</a>
-                </li>
+                    </li>';
+            }
+                ?>
+                
+                
             </ul>
         </div>
     </div>
